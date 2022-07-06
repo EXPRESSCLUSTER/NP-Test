@@ -1,7 +1,7 @@
 # Network Test
 
-General HA clusters are designed to guarantee the high-availability / business-continuity for any single failure, so, what need to be tested is to make sure that the cluster can tolerate a single failure.
-However, it is good to know the limits by issuing multiple consecutive failures and observing business outage.
+General HA clusters are designed to be tolerate for any single failure, so, what need to be tested is to make sure that the cluster can tolerate any single failure and can guarantee business-continuity.
+This also means it cannot be tolerate multiple failures, so, it is good to know the limits by issuing multiple failures and observing business outage.
 This document describes the test for network and the expected results for HA/DR cluster.
 
 ----
@@ -58,7 +58,8 @@ Even if an HA cluster is used, the system may stop on multiple failures. This te
 
 **In general system operation, when an HA cluster has the first and single failure, it is expected to be repaired before the second and multiple failure.**
 
-This also starts from All Green State that FOG runs on `VM#1`. Disconnect the Witness, secondary heartbeat network, and primary heartbeat network.
+This also starts from All Green State that FOG runs on `VM#1`.
+Disconnect the Witness, secondary heartbeat network, and primary heartbeat network.
 In `VM#1` and `VM#2` view, the both consider the other to be dead. At the same time, the both can not communicate with the `Witness`. `VM#1` considers itself as isolated from the cluster and executes suicide (ESD), and `VM#2` do the same, thus the business gets outage.
 
 ![Pic.3](./image3.png)
