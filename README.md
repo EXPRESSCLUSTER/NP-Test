@@ -39,11 +39,10 @@ Start from All Green State that FOG runs on VM#1. Disconnecting VM#1 from the cl
 
 ## Forced Stop test
 
-Start from All Green State that FOG runs on `VM#1`. Pause `VM#1` to simulate delayed processing. `VM#2` acknowledges HBTO of `VM#1`, then processes failover. On the failover, `VM#1` is stopped (powered off) by the *Forced Stop function*. Confirm `VM#1` can be powered on and cannot be resumed.
+Start from All Green State that FOG runs on `VM#1`. Pause `VM#1` to simulate delayed processing (ex. [Hyper-V GUI](image4.png)). `VM#2` acknowledges HBTO of `VM#1`, then processes failover. On the failover, `VM#1` is stopped (powered off) by the *Forced Stop function*. Confirm `VM#1` can be powered on and cannot be resumed.
 
 Pausing a virtual machine does the following:  
 Virtual machine's process is paused. virtual machine CPU activity is clear, but RAM is still used by the virtual machine's process. The released CPU resources can then be used by the host OS and its applications or by other virtual machines running on the host computer.
-
 
 ![Pic.2](./image2.png)
 
