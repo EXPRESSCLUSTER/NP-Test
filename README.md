@@ -1,8 +1,8 @@
 # Network Test
 
-General HA clusters are designed to be tolerate for any single failure, so, what need to be tested is to make sure that the cluster can tolerate any single failure and can guarantee business-continuity.
-This also means it cannot be tolerate multiple failures, so, it is good to know the limits by issuing multiple failures and observing business outage.
-This document describes the test for network and the expected results for HA/DR cluster.
+This document describes the test for network and the expected results for EXPRESSCLUSTER HA/DR configuration.
+General HA clusters are designed to be tolerate for any single failure, so, what need to be tested is to make sure that EXPRESSCLUSTER can tolerate any single failure and can guarantee business-continuity.
+This also means there are cases it cannot be tolerate multiple failures, so, that's good to know its limits by issuing multiple failures and by observing business outage.
 
 ----
 
